@@ -18,7 +18,7 @@ def user_input():
 
     print('Hay! Let\'s see some US bikeshare data!')
 
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
    
     city = input('Choose the city you want to analyze: \n 1-Chicago \n 2-New York \n 3-Washington\n Enter the city: ').lower()
     
