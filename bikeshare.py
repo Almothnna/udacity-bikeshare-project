@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-# loading Files
+# loading files
 CITY_DATA = {
     'chicago':'chicago.csv',
     'new york city':'new_york_city.csv',
@@ -13,7 +13,6 @@ def user_input():
     '''
     This function starts the user interface by introduction and
     asking the user with the city he/she wants to analyze
-
     '''
 
     print('Hay! Let\'s see some US bikeshare data!')
@@ -38,7 +37,6 @@ def get_time():
     '''
     the code below asks the user to choose between month and day of month,
     day of the week or no filters
-
     '''
     period = input('\n filter the data by month and day of the month, day of the week or do not want to filter? Type "no" for no filter. \n').lower()
 
@@ -225,7 +223,6 @@ def stations_stats(df):
 def popular_trip(df):
     '''
     What is the most popular trip?
-
     '''
     # df - dataframe returned from time_filters
     result = df[['Start Station', 'End Station']].groupby(['Start Station', 'End Station']).size().nlargest(1)
@@ -235,7 +232,6 @@ def popular_trip(df):
 def counts_of_users_type(df):
     '''
     What are the counts of each user type?
-
     '''
      # df - dataframe returned from time_filters
     print('\n -- Types of users: 1-subscribers\n2-customers\n3-others\n')
